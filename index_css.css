@@ -1,0 +1,108 @@
+body{
+  
+    margin:0px; 
+    padding:0px; 
+    text-align: center; 
+    background-color:grey;
+    font-family: Snell Roundhand;
+    color: white;
+
+}
+
+.titlePart{
+    position:relative; 
+    height:100px;
+    margin-top: 10%;
+}
+
+.borderTitle{
+    position:absolute;
+    z-index:1 ;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    animation: animateborder 5s linear; 
+}
+@keyframes animateborder{
+     0% {
+         top: -500%;
+       }
+       50% {
+       
+         top:50%;
+       }
+       75%{
+          top:0%
+          
+       }
+       100% {
+       
+       }
+ }
+
+.title{
+position:absolute;
+top:22px; 
+z-index:2;
+font-size:350% ;
+left: 50%;
+transform: translate(-50%, -23%); 
+color: goldenrod;
+font-style: italic;
+
+animation: animatetitle 3s linear; 
+
+
+}
+
+@keyframes animatetitle{
+    0% {
+        left: -100%;
+      }
+      50% {
+        left: 51%;
+        top:10%;
+      }
+      75%{
+          left: 45%;
+          top:5%
+      }
+      100% {
+        left: 50%;
+      }
+}
+
+#btn-read{
+
+    margin-top: 240px;
+    margin-bottom: 10px;
+}
+
+.instruction{
+    display: none;
+    font-size: 120%;
+}
+
+.close{
+    color:goldenrod;
+}
+
+
+
+
+.btn{
+ 
+    background-color:rgb(186,85,211);
+    border: 1px solid rgb(186,85,211, 0.6);
+    border-radius: 5px;
+   padding: 5px 50px;
+   
+    color: white;
+   
+    
+}
+
+.btn:hover{
+    border-color: black;
+}
+
+

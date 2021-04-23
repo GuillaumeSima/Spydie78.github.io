@@ -1,0 +1,97 @@
+body{
+  
+    margin:0px; 
+    padding:0px; 
+    text-align: center; 
+    background-color:grey;
+    font-family: Snell Roundhand;
+    color: white;
+
+}
+
+
+.titlePart{
+    margin-top: 100px;
+    margin-bottom: 150px;
+    position:relative; 
+    height:100px;
+}
+
+.borderTitle{
+    position:absolute;
+    z-index:1 ;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.title{
+position:absolute;
+top:22px; 
+z-index:2;
+font-size:100% ;
+left: 50%;
+transform: translate(-50%, 0%); 
+color: goldenrod;
+
+}
+
+.result{
+
+    animation: text 3s 1;
+    color: brown;
+    font-size: 320%;
+}
+
+
+@keyframes text{
+    0%{
+        color: black;
+        margin-bottom: -40%;
+    }
+    30%{
+        letter-spacing: 25px;
+        margin-bottom: -40px;
+    }
+    85%{
+        letter-spacing: 8px;
+        margin-bottom: -40px;
+    }
+}
+
+.explication{
+    font-size: 120%;
+    margin-bottom: 200px;
+}
+
+.btn{
+
+    background-color:rgb(186,85,211);
+    border: 1px solid rgb(186,85,211, 0.6);
+    border-radius: 5px;
+   padding: 5px 50px;
+   
+    color: white;
+    
+}
+
+.btn:hover{
+    border-color: black;
+}
+
+p {
+    animation-duration: 3s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+

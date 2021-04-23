@@ -1,0 +1,421 @@
+body{
+  
+    margin:0px; 
+    padding:0px; 
+    text-align: center; 
+    background-color:grey;
+    font-family: Snell Roundhand;
+    font-style: italic;
+
+}
+.titlePart{
+    position:relative; 
+    height:100px;
+}
+
+.borderTitle{
+    position:absolute;
+    z-index:1 ;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.title{
+position:absolute;
+top:22px; 
+z-index:2;
+font-size:100% ;
+left: 50%;
+transform: translate(-50%, 0%); 
+color: goldenrod;
+
+}
+
+.storyPart{
+    position:relative;
+}
+
+.borderStory{
+    position:absolute;
+    z-index:1 ;
+    left: 51%;
+    transform: translate(-50%,-11%);
+}
+
+.container{
+    position:fixed;
+    height: 100%;
+    width: 100%;
+}
+
+.partOne{
+ 
+ width: 78%;
+ height: 100%;
+ float: left;
+
+
+}
+
+.story{
+  width: 90%;
+   margin-left: 5%;
+   margin-top:5%;
+   height: 300px;
+   position:absolute;
+   z-index:2;
+   color: white;
+
+   
+}
+
+
+#location{
+    color:hsl(300,100%,25%);
+    font-size: x-large;
+}
+.btn-grid{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    gap:10px; 
+    margin-top: 15px;
+ 
+    justify-content: center;
+}
+
+.btn{
+   
+    background-color:rgb(186,85,211);
+    border: 1px solid rgb(186,85,211, 0.6);
+    border-radius: 5px;
+   padding: 5px 50px;
+   
+    color: white;
+    outline: none;
+}
+
+.btn:hover{
+    border-color: black;
+}
+
+
+.menu{
+    width: 22%;
+    height: 100%;
+
+    float: left;
+   
+} 
+
+.timer{
+   
+    color: goldenrod;
+    height: 5%;
+    margin-top: 5%;
+    padding-top: 5%;
+    margin-left: 1%;
+    margin-right: 1%;
+    
+    position:relative;
+    border: 3mm ridge rgb(218,165,32, 0.8);
+}
+
+.timerImg{
+   float: left; 
+    width: 50%;
+    margin-left: -5%;
+
+}
+#timerNbr{
+    float: left;
+margin-left: -18%;
+font-size: x-large;
+font-family: OCR A Std, monospace;
+
+}
+.wallet{
+    height: 5%;
+    margin-top: 2%;
+    padding-top: 5%;
+    vertical-align: top;
+    position: relative;
+    color: goldenrod;
+}
+
+.walletImg{
+    width: 50%;
+    float: left;
+}
+.walletSolde{
+    float: left;
+    margin-left: -10%;
+    margin-top: -7%;
+    font-size: x-large;
+font-family: OCR A Std, monospace;  
+border-bottom: 3px double goldenrod;
+
+
+}
+
+
+.objects{
+    margin-top: 10%;
+    background-color:#949494;
+    float: right;
+    height: 30%;
+    width: 100%;
+    font-size: x-large;
+    font-family: OCR A Std, monospace;
+    border-radius: 20px 10px 30px 10px;
+    box-shadow: 12px 4px 0px 1px goldenrod;
+}
+
+.button-objects{
+    height: 30px;
+    width: 30px;
+    position: relative;
+    cursor: pointer;
+   color: goldenrod;
+    margin-left: 20px;
+   
+}
+
+.button-objects span{
+    height: 3px;
+    background-color: goldenrod;
+    width: 100%;
+    position: absolute;
+    top: 20px;
+    left: 0;
+}
+.button-objects span:before{
+    content: '';
+    height: 3px;
+    background-color:goldenrod;
+    width: 100%;
+    position: absolute;
+    top: -10px;
+    left: 0;
+}
+.button-objects span:after{
+    content: '';
+    height: 3px;
+    background-color: goldenrod;
+    width: 100%;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+
+.menu-objects{
+float: right;
+width: 100%;
+height: 100%;
+
+}
+
+.menu-objects a{
+    text-transform: capitalize;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: block; 
+    padding-top: 20px;
+
+}
+
+.nav{
+    margin-right: -90%;
+    transition-duration: 0.2s;
+}
+
+.nav_open{
+    margin-right: 0%;
+    transition-duration: 0.2s;
+}
+
+
+.partTwo{
+   
+
+  
+    width: 100%;
+    height: 29%;
+    margin-top: 37%;
+    margin-left: 11%;
+  
+    
+}
+.map{
+  
+   width: 100%;
+   height: 50%;
+   margin-top: 10%;
+ 
+    float: left;
+}
+#mapCastle {
+    height: 100%;
+    width:100%;
+    background-color: black;
+}
+
+
+.compassMenu{
+    margin-left: 5%;
+    width: 70%;
+    height: 35%;
+    position: relative;
+    float: left;
+}
+
+.borderCompass{
+    position:absolute;
+    z-index:1 ;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.compass {
+    position: relative;
+    z-index: 2;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    background-color:goldenrod;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    left: 50%;
+    transform: translate(-50%, 50%);
+    
+  }
+
+  .compass > .arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-style: solid;
+    border-width: 15px 10px 0 10px;
+    border-color: red transparent transparent transparent;
+    z-index: 1;
+  }
+
+  .outer {
+    animation: rotate 2s ease-out 1;
+    height: 60px;
+    width: 60px;
+   left: 30%;  
+    top: 31%;
+    }
+
+  .circle {
+    color:black;
+    font-size:10px;
+    background: linear-gradient( yellow, orange);
+    border-radius: 50%;
+    position: absolute;
+    border: none;
+   
+    }
+
+
+    #IceCreamSeller{
+
+        flex-direction: column;
+    
+     
+        
+        
+    }
+    
+    #form{
+    height: 270px;
+      
+  
+    }
+    .headIce{
+           
+           border: dashed;
+        
+             margin-left: 39%;
+           width: 250px;
+        
+
+        
+        
+    }
+    .menuFormat{
+        width: fit-content;
+        float: left;
+        padding-left: 75px;
+  
+    }
+    .menuFlavors{
+        width:fit-content;
+        float: left;
+    }
+    .menuSauce{
+        width: fit-content;
+        float: left;
+    }
+    .menuExtras{
+        width: fit-content;
+        float: left;
+    }
+    .group{
+    
+        padding:0px 48px;
+        text-align: left;
+       
+       
+      }
+    input[type="radio"]{
+        display: none;
+    }
+    input[type="checkbox"]{
+        display:none; 
+      }
+    
+      label{
+        position: relative;
+      }
+      
+      label::before{
+        content: "";
+        background: url("drawlable/check_circle.png");
+        background-position:center;
+        background-size: contain;
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        left:-44px;
+        top:-8px;
+    
+        transform: scale(0) rotateZ(360deg);
+        transition: all 0.4s cubic-bezier(0.54, 0.01,0,1.49);
+      }
+    
+      input[type="checkbox"]:checked+label::before{
+        transform: scale(1) rotateZ(0deg);
+      }
+      input[type="radio"]:checked+label::before{
+        transform: scale(1) rotateZ(0deg);
+      }
+    
+      label::after{
+    
+        content: "";
+        border: 2px solid #27ae60;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        left: -42px;
+        top:-6px; 
+        border-radius: 50%;
+      }
+
+      #erreurSelect{
+          color: red;
+      }

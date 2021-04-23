@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Adventure Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="code.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="partOne">
+            <div class="titlePart">
+                <div class="borderTitle">
+                    <img src="drawlable/border4.png">
+                </div>
+                <div class="title">
+                    <h1><b>The Royal Grove</b></h1>
+
+                </div>
+            </div>
+
+
+            <div class="storyPart">
+                <div class="borderStory">
+                    <img src="drawlable/stroryFrame4.png">
+                </div>
+
+
+                <div class="story">
+
+                    <div id="location">Location</div>
+                    <div id="text">Text</div>
+
+                    <div id="IceCreamSeller">
+
+                        <div id="form">
+                            <h1 class="headIce">Ice Cream Menu</h1>
+                            <form method="POST" action="#" onsubmit="alert('no checking out'); return false;"></form>
+                            <div class="menuFormat">
+                                <fieldset>
+                                    <legend>Format</legend>
+
+                                    <div class="group">
+                                        <input type="radio" name="icecream" id="cone" value="cone"
+                                            onchange="updateTotal()">
+
+                                        <label for="cone">Cone £1.5</label>
+
+                                        <img src="drawlable/cone.png" style="height: 24px; padding-left: 6px;" alt="" />
+                                    </div>
+
+
+                                    <div class="group">
+                                        <input type="radio" name="icecream" id="cup" value="cup"
+                                            onchange="updateTotal()">
+                                        <label for="cup">Cup £1</label>
+                                        <img src="drawlable/cup.png" style="height: 24px; padding-left: 6px;" alt="" />
+                                    </div>
+
+                                </fieldset>
+                            </div>
+
+
+
+                            <div class="menuFlavors">
+                                <fieldset>
+                                    <legend>Flavors (£1 per scoop)</legend>
+                                    <div class="group">
+                                        <input type="checkbox" name="flavors" id="strawberry" value="strawberry"
+                                            onchange="updateTotal()">
+                                        <label for="strawberry">Strawberry</label>
+                                        <img src="drawlable/strawberry.png" style="height: 24px; padding-left: 6px;"
+                                            alt="" />
+                                    </div>
+
+                                    <div class="group">
+                                        <input type="checkbox" name="flavors" id="peach" value="peach"
+                                            onchange="updateTotal()">
+                                        <label for="peach">Peach</label>
+                                        <img src="drawlable/peach.png" style="height: 24px; padding-left: 6px;"
+                                            alt="" />
+                                    </div>
+
+                                    <div class="group">
+                                        <input type="checkbox" name="flavors" id="grape" value="grape"
+                                            onchange="updateTotal()">
+                                        <label for="grape">Grape</label>
+                                        <img src="drawlable/grapes.png" style="height: 24px; padding-left: 6px;"
+                                            alt="" />
+                                    </div>
+
+                                    <div class="group">
+                                        <input type="checkbox" name="flavors" id="mint" value="mint"
+                                            onchange="updateTotal()">
+                                        <label for="mint">Mint</label>
+                                        <img src="drawlable/mint.png" style="height: 24px; padding-left: 6px;" alt="" />
+                                    </div>
+                                    <div class="group">
+                                        <input type="checkbox" name="flavors" id="vanilla" value="vanilla"
+                                            onchange="updateTotal()">
+                                        <label for="vanilla">Vanilla</label>
+                                        <img src="drawlable/vanilla.png" style="height: 24px; padding-left: 6px;"
+                                            alt="" />
+                                    </div>
+                                    <div class="group">
+                                        <input type="checkbox" name="flavors" id="chocolate" value="chocolate"
+                                            onchange="updateTotal()">
+                                        <label for="chocolate">Chocolate</label>
+                                        <img src="drawlable/bonbons.png" style="height: 24px; padding-left: 6px;"
+                                            alt="" />
+                                    </div>
+
+
+                                </fieldset>
+                            </div>
+
+                            <div class="menuSauce">
+                                <fieldset>
+                                    <legend>Sauce 50p</legend>
+                                    <select name="sauce" id="sauce" onchange="updateTotal()">
+                                        <option value="none">None</option>
+                                        <option value="chocolate">Chocolate</option>
+                                        <option value="strawberry">Strawberry</option>
+                                        <option value="fudge">Fudge</option>
+                                    </select>
+                                </fieldset>
+                            </div>
+                            <div class="menuExtras">
+                                <fieldset>
+                                    <legend>Extras 25p</legend>
+                                    <div class="group">
+                                        <input type="checkbox" name="extras" id="sprinkles" value="sprinkles"
+                                            onchange="updateTotal()">
+                                        <label for="sprinkles">Sprinkles</label>
+                                        <img src="drawlable/sprinkling.png" style="height: 24px; padding-left: 6px;"
+                                            alt="" />
+                                    </div>
+
+                                    <div class="group">
+                                        <input type="checkbox" name="extras" id="cherry" value="cherry"
+                                            onchange="updateTotal()">
+                                        <label for="cherry">Cherry</label>
+                                        <img src="drawlable/cherry.png" style="height: 24px; padding-left: 6px;"
+                                            alt="" />
+                                    </div>
+                                    <div class="group">
+                                        <input type="checkbox" name="extras" id="cream" value="cream"
+                                            onchange="updateTotal()">
+                                        <label for="cream">Cream</label>
+                                        <img src="drawlable/whipped-cream.png" style="height: 24px; padding-left: 6px;"
+                                            alt="" />
+                                    </div>
+                                </fieldset>
+                            </div>
+
+
+
+                            <div id="prices">
+                                <table>
+                                    <tr>
+                                        <td>IceCream Options</td>
+                                        <td id="optionPrice"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Flavors</td>
+                                        <td id="flavorsPrice"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sauce</td>
+                                        <td id="saucePrice"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Extras</td>
+                                        <td id="extrasPrice"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Total</td>
+                                        <td id="totalPrice"></td>
+                                    </tr>
+                                </table>
+                                <p id="erreurSelect"></p>
+                            </div>
+
+
+
+                        </div>
+
+
+
+                    </div>
+                    <div id="option-buttons" class="btn-grid">
+                        <button class="btn">Option 1</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="partTwo">
+
+                <div class="compassMenu">
+                    <div class="borderCompass">
+                        <img src="drawlable/bousoleCadre2.png">
+                    </div>
+
+                    <div class="compass">
+                        <div class="arrow"></div>
+                        <img id="img1" src="drawlable/compass1.png" alt="cog1" height="100%" width="100%">
+                        <button class="outer circle" id="south">South</button>
+                        <button class="outer circle" id="north">North</button>
+                        <button class="outer circle" id="east">East</button>
+                        <button class="outer circle" id="west">West</button>
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="menu">
+
+            <div class="timer">
+                <div class="timerImg"><img src="drawlable/timer.png" alt="" height="30px"></div>
+                <div id="timerNbr"></div>
+            </div>
+            <div id="wallet" class="wallet">
+                <div class="walletImg"> <img src="drawlable/purse.png" alt="" height="30px"></div>
+                <div class="walletSolde">
+                    <p>SOLDE £<span id="solde">1</span></p>
+                </div>
+            </div>
+
+            <div class="objects nav">
+
+                <div class="button-objects">
+                    <p style="padding-left: 110px;">OBJECTS</p>
+                    <span></span>
+
+
+                </div>
+
+                <div id="menu-objects" class="menu-objects">
+                </div>
+            </div>
+
+            <div class="map">
+                <div id="mapCastle"></div>
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+</body>
+
+
+
+</html>
